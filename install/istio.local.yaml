@@ -1,0 +1,47 @@
+apiVersion: install.istio.io/v1beta1
+kind: IstioControlPlane
+spec:
+  # Use the default profile as the base
+  # More details at: https://istio.io/docs/setup/additional-setup/config-profiles/
+  profile: default
+#check https://github.com/istio/istio/tree/release-1.6/manifests
+  values:
+    sidecarInjectorWebhook:
+        rewriteAppHTTPProbe: true
+    global:
+      # Ensure that the Istio pods are only scheduled to run on Linux nodes
+      defaultNodeSelector:
+        kubernetes.io/os: linux
+      # Enable mutual TLS for the control plane
+      controlPlaneSecurityEnabled: false
+      mtls:
+        # Require all service to service communication to have mtls
+        enabled: false
+    grafana:
+      # Enable Grafana deployment for analytics and monitoring dashboards
+      enabled: false
+      security:
+        # Enable authentication for Grafana
+        enabled: false
+    tracing:
+      #Default Jaeger
+      enabled: true
+    prometheus:
+      enabled: false&
+    kiali:
+      dashboard:
+        jaegerInClusterURL: "http://tracing/jaeger"
+        grafanaInClusterURL: "http://grafana.monitoring.svc.cluster.local:3000"
+        #grafanaURL: "https://grafana.20.50.23.142.nip.io"
+        #jaegerURL: "https://tracing.20.50.23.142.nip.io"
+      enabled: true
+      security:
+        # Enable authentication for KIALI
+        enabled: false
+    # gateways:
+    #   istio-ingressgateway:
+    #     serviceAnnotations: 
+    #       service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+    #     loadBalancerIP: "20.0.1.100"
+       
+          
