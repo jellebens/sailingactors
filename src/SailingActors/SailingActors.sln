@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SailingActors.Api", "SailingActors.Api\SailingActors.Api.csproj", "{D9215116-87D0-42C2-9421-029C1D4719E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9215116-87D0-42C2-9421-029C1D4719E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9215116-87D0-42C2-9421-029C1D4719E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9215116-87D0-42C2-9421-029C1D4719E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9215116-87D0-42C2-9421-029C1D4719E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68E442F2-0803-4A96-AD44-88D4D86D55BB}
+	EndGlobalSection
+EndGlobal

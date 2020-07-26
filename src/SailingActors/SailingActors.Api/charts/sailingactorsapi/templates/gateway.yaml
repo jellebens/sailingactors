@@ -1,0 +1,17 @@
+##Different gateway to facilitate nort-south trazfic
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: {{ template "sailingactorsapi.fullname" . }}
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    {{- range .Values.ingress.hosts }}
+      - {{ . }}
+    {{- end }}
