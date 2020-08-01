@@ -1,9 +1,9 @@
-fullnameOverride: daprapi
-nameOverride: "dapr-api"
+fullnameOverride: sailingactorsapi
+nameOverride: "sailingactors-api"
 
 replicaCount: 1
 image:
-  repository: dapr/sailingactors
+  repository: sailingactors/api
   tag: stable
   pullPolicy: IfNotPresent
 imagePullSecrets: []

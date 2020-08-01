@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace SalilingActors.Actors
 {
-    public class ShoppingCartController : Actor, IShoppingCart
+    public class ShoppingCartActor : Actor, IShoppingCart
     {
-        private readonly ILogger<ShoppingCartController> _Logger;
+        private readonly ILogger<ShoppingCartActor> _Logger;
 
-        public ShoppingCartController(ActorService actorService, ActorId actorId, IActorStateManager actorStateManager = null) : base(actorService, actorId, actorStateManager)
+        public ShoppingCartActor(ActorService actorService, ActorId actorId, IActorStateManager actorStateManager = null) : base(actorService, actorId, actorStateManager)
         {
             var loggerFactory = LoggerFactory.Create(builder =>
             {
@@ -27,7 +27,7 @@ namespace SalilingActors.Actors
                     });
             });
 
-            _Logger = loggerFactory.CreateLogger<ShoppingCartController>();
+            _Logger = loggerFactory.CreateLogger<ShoppingCartActor>();
         }
 
         public Task Add(long productId, string name, int quantity)

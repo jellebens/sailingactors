@@ -11,6 +11,8 @@ namespace SailingActors.Api
 {
     public class Program
     {
+        private const int AppChannelHttpPort = 3000;
+
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();

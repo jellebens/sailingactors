@@ -3,7 +3,7 @@
 $component = "sailingactors-api"
 $chart = "sailingactorsapi"
 $projectDir = ".\SailingActors.Api"
-$imgName = "dapr/sailingactors"
+$imgName = "sailingactors/api"
 
 
 $helmInstalls =  helm list -n $namesespace -o json | ConvertFrom-Json
@@ -19,4 +19,4 @@ docker build -f "$projectDir\Dockerfile" . -t $imgName":"$tag
 
 Write-Host "Helm upgrade"
 
-helm upgrade --install $component $projectDir\charts\$chart --namespace $namesespace --set image.tag=$tag --wait
+helm upgrade --install $component $projectDir\charts\$chart --namespace $namesespace --set image.tag=$tag --set image.repository=$imgName --wait

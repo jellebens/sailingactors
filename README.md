@@ -1,6 +1,6 @@
 # Sailing Actors
 
-Demo project to show dapr in conjonction with istio
+Demo project to have dapr running together with istio
 
 ## Installation
 
@@ -60,9 +60,8 @@ helm repo add dapr https://daprio.azurecr.io/helm/v1/repo
 helm repo update
 
 kubectl create namespace dapr-system
-kubectl label namespace dapr-system istio-injection=enabled
 
-helm install dapr dapr/dapr --namespace dapr-system  --set mtls.enabled=false
+helm install dapr dapr/dapr --namespace dapr-system  --set global.mtls.enabled=false
 ```
 
 ### Install Redis
@@ -71,7 +70,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 
 kubectl create namespace redis
-kubectl label namespace redis istio-injection=enabled
+
 helm upgrade --install redis bitnami/redis --namespace redis
 ```
 

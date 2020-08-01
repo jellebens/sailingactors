@@ -12,6 +12,9 @@ namespace SalilingActors.Actors
 {
     public class Program
     {
+        //TODO get this from config
+        private const int AppChannelHttpPort = 3000;
+
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
@@ -24,8 +27,9 @@ namespace SalilingActors.Actors
                     webBuilder.UseStartup<Startup>();
                     webBuilder.UseActors(art =>
                     {
-                        art.RegisterActor<ShoppingCartController>();
+                        art.RegisterActor<ShoppingCartActor>();
                     });
+                    webBuilder.UseUrls($"http://localhost:{AppChannelHttpPort}/");
                 });
     }
 }

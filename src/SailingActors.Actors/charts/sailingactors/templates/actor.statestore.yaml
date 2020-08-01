@@ -1,0 +1,15 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: statestore
+spec:
+  type: state.redis
+  metadata:
+  - name: redisHost
+    value: {{ .Values.dapr.statestore.redis.host }}
+  - name: redisPassword
+    secretKeyRef:
+      name: redis
+      key:  passphrase
+  - name: actorStateStore 
+    value: "true"
