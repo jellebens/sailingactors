@@ -24,7 +24,7 @@ namespace SalilingActors.Actors
                     webBuilder.UseStartup<Startup>();
                     webBuilder.UseActors(art =>
                     {
-                        art.RegisterActor<ShoppingCart>();
+                        art.RegisterActor<ShoppingCartController>();
                     });
                 });
     }

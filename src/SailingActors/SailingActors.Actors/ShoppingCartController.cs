@@ -2,7 +2,7 @@
 using Dapr.Actors.Runtime;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
-using SailingActors.Shared;
+using SailingActors.Shared.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace SalilingActors.Actors
 {
-    public class ShoppingCart : Actor, IShoppngCart
+    public class ShoppingCartController : Actor, IShoppingCart
     {
-        private readonly ILogger<ShoppingCart> _Logger;
+        private readonly ILogger<ShoppingCartController> _Logger;
 
-        public ShoppingCart(ActorService actorService, ActorId actorId, IActorStateManager actorStateManager = null) : base(actorService, actorId, actorStateManager)
+        public ShoppingCartController(ActorService actorService, ActorId actorId, IActorStateManager actorStateManager = null) : base(actorService, actorId, actorStateManager)
         {
             var loggerFactory = LoggerFactory.Create(builder =>
             {
@@ -27,12 +27,12 @@ namespace SalilingActors.Actors
                     });
             });
 
-            _Logger = loggerFactory.CreateLogger<ShoppingCart>();
+            _Logger = loggerFactory.CreateLogger<ShoppingCartController>();
         }
 
-        public void Submit()
+        public Task Add(long productId, string name, int quantity)
         {
-            
+            return Task.CompletedTask;
         }
     }
 }

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SailingActors.Api", "SailingActors.Api\SailingActors.Api.csproj", "{D9215116-87D0-42C2-9421-029C1D4719E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SailingActors.Api", "SailingActors.Api\SailingActors.Api.csproj", "{D9215116-87D0-42C2-9421-029C1D4719E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalilingActors.Actors", "SalilingActors.Actors\SalilingActors.Actors.csproj", "{970B393E-2D5F-4808-87BC-5BFA8E2F57B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SailingActors.Shared", "SailingActors.Shared\SailingActors.Shared.csproj", "{25B2CFE0-6002-499E-9F8D-6025983A868D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SailingActors.Shared", "SailingActors.Shared\SailingActors.Shared.csproj", "{25B2CFE0-6002-499E-9F8D-6025983A868D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SailingActors.Actors", "SailingActors.Actors\SailingActors.Actors.csproj", "{4E5A6ECD-DFB1-46BB-AF75-A3FCB41DA4C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{D9215116-87D0-42C2-9421-029C1D4719E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9215116-87D0-42C2-9421-029C1D4719E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9215116-87D0-42C2-9421-029C1D4719E3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{970B393E-2D5F-4808-87BC-5BFA8E2F57B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{970B393E-2D5F-4808-87BC-5BFA8E2F57B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{970B393E-2D5F-4808-87BC-5BFA8E2F57B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{970B393E-2D5F-4808-87BC-5BFA8E2F57B3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{25B2CFE0-6002-499E-9F8D-6025983A868D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{25B2CFE0-6002-499E-9F8D-6025983A868D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25B2CFE0-6002-499E-9F8D-6025983A868D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25B2CFE0-6002-499E-9F8D-6025983A868D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E5A6ECD-DFB1-46BB-AF75-A3FCB41DA4C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E5A6ECD-DFB1-46BB-AF75-A3FCB41DA4C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E5A6ECD-DFB1-46BB-AF75-A3FCB41DA4C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E5A6ECD-DFB1-46BB-AF75-A3FCB41DA4C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

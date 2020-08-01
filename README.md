@@ -75,6 +75,8 @@ kubectl label namespace redis istio-injection=enabled
 helm upgrade --install redis bitnami/redis --namespace redis
 ```
 
+## Install Reports
+
 ## Prep
 ```powershell
 kubectl create namespace sailingactors

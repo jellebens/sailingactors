@@ -28,6 +28,10 @@ ingress:
   hosts:
     - "sailingactors.127.0.0.1.nip.io"
 
+jaeger:
+  agent:
+    host: "jaeger-agent.istio-system"
+
 secrets: {}
   
 resources:

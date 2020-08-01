@@ -9,6 +9,8 @@ spec:
     sidecarInjectorWebhook:
         rewriteAppHTTPProbe: true
     global:
+      telemetryNamespace: observability
+      prometheusNamespace: observability
       # Ensure that the Istio pods are only scheduled to run on Linux nodes
       defaultNodeSelector:
         kubernetes.io/os: linux
@@ -17,6 +19,7 @@ spec:
       mtls:
         # Require all service to service communication to have mtls
         enabled: false
+      ##Promotthge:  monitoring-prometheus-server.observaibility
     grafana:
       # Enable Grafana deployment for analytics and monitoring dashboards
       enabled: false
@@ -27,7 +30,7 @@ spec:
       #Default Jaeger
       enabled: true
     prometheus:
-      enabled: false&
+      enabled: true
     kiali:
       dashboard:
         jaegerInClusterURL: "http://tracing/jaeger"
@@ -38,6 +41,7 @@ spec:
       security:
         # Enable authentication for KIALI
         enabled: false
+      #prometheusAddr: http://monitoring-prometheus-server.observaibility:9090
     # gateways:
     #   istio-ingressgateway:
     #     serviceAnnotations: 

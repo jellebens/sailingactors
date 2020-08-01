@@ -45,6 +45,11 @@ spec:
               port: http
           {{- end }}
           env:
+          env:
+            - name: JAEGER_AGENT_HOST
+              value: {{ .Values.jaeger.agent.host }}
+            - name: SERVICE_NAME
+              value: "{{ template "sailingactorsapi.fullname" . }}.{{ .Release.Namespace }}"
             {{- $root := . }}
             {{- range $ref, $values := .Values.secrets }}
             {{- range $key, $value := $values }}
