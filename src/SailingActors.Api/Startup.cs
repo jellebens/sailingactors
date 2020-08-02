@@ -28,6 +28,8 @@ namespace SailingActors.Api
 
             services.AddTransient<ICartIdGenerator, CartIdGenerator>();
 
+            services.AddDaprClient();
+
             services.AddJaegerTracing(options =>
             {
                 options.ServiceName = Configuration["SERVICE_NAME"];

@@ -15,7 +15,7 @@ spec:
     metadata:
       annotations:
         dapr.io/enabled: "true"
-        dapr.io/id: "dapr-actors"
+        dapr.io/id: "salingactors"
         dapr.io/port: "{{ .Values.dapr.port }}"
         dapr.io/log-level: "debug"
         dapr.io/log-as-json: "true"

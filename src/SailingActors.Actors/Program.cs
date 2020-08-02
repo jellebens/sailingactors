@@ -8,7 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Dapr.Actors.AspNetCore;
 
-namespace SalilingActors.Actors
+namespace SailingActors.Actors
 {
     public class Program
     {

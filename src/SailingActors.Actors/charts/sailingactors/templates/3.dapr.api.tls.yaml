@@ -1,0 +1,9 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+ name: "dapr-api"
+spec:
+ host: "dapr-api.dapr-system.svc.cluster.local"
+ trafficPolicy:
+   tls:
+     mode: DISABLE

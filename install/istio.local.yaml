@@ -9,8 +9,8 @@ spec:
     sidecarInjectorWebhook:
         rewriteAppHTTPProbe: true
     global:
-      telemetryNamespace: observability
-      prometheusNamespace: observability
+      #telemetryNamespace: observability
+      #prometheusNamespace: observability
       # Ensure that the Istio pods are only scheduled to run on Linux nodes
       defaultNodeSelector:
         kubernetes.io/os: linux

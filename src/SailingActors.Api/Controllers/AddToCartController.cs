@@ -36,11 +36,11 @@ namespace SailingActors.Api.Controllers
                 id = _IdGenerator.New();
             }
 
-            string ActorType = "ShoppingCart";
+            string actorType = "ShoppingCartActor";
 
             ActorId actorId = new ActorId(id);
 
-            IShoppingCart cart = ActorProxy.Create<IShoppingCart>(actorId, ActorType);
+            IShoppingCart cart = ActorProxy.Create<IShoppingCart>(actorId, actorType);
 
             await cart.Add(addItem.Id, addItem.Name, addItem.Quantity);
 

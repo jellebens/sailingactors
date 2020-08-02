@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "SalilingActors.Actors": {
+    "SailingActors.Actors": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

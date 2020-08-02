@@ -1,0 +1,9 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+ name: "dapr-sidecar-injector"
+spec:
+ host: "dapr-sidecar-injector.dapr-system.svc.cluster.local"
+ trafficPolicy:
+   tls:
+     mode: DISABLE
