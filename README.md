@@ -1,6 +1,6 @@
 # Sailing Actors
 
-Demo project to have dapr running together with istio
+Demo project to have dapr running together with istio. Works in progress
 
 ## Installation
 
@@ -61,7 +61,7 @@ helm repo update
 
 kubectl create namespace dapr-system
 
-helm install dapr dapr/dapr --namespace dapr-system  --set global.mtls.enabled=false
+helm install dapr dapr/dapr --namespace dapr-system   
 ```
 
 ### Install Redis
@@ -81,3 +81,9 @@ helm upgrade --install redis bitnami/redis --namespace redis
 kubectl create namespace sailingactors
 kubectl label namespace sailingactors istio-injection=enabled
 ```
+
+
+
+# Cheatsheet
+kubectl logs  -l app.kubernetes.io/name=sailingactors -c daprd --follow -n sailingactors
+
