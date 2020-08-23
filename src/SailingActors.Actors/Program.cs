@@ -28,6 +28,7 @@ namespace SailingActors.Actors
                     webBuilder.UseActors(art =>
                     {
                         art.RegisterActor<ShoppingCartActor>();
+                        art.RegisterActor<HealthActor>();
                     });
                     webBuilder.UseUrls($"http://localhost:{AppChannelHttpPort}/");
                 });

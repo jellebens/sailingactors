@@ -13,3 +13,5 @@ spec:
       key:  passphrase
   - name: actorStateStore 
     value: "true"
+  # - name: enableTLS
+  #   value: "true"
